@@ -1,0 +1,253 @@
+/* Trabajamos el fondo de la tarjeta como si fuese un componente*/
+.ct_cardTarifas {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorFondoTarjetas);
+    box-shadow: var(--sombraTarjeta);
+    border-radius: var(--borderRadiusGrande);
+    padding: 20px;
+
+    @media (width < 320px){
+        transform: translateX(250px);
+        min-width: 75%; /* Cada tarjeta ocupa un ancho mínimo del 85% */
+        flex-shrink: 1; /* Evita que las tarjetas se reduzcan */
+        margin-block: 26px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (min-width: 321px) and (max-width: 375px) {
+        
+        
+    }
+
+
+    @media (min-width: 376px) and (max-width: 425px) {
+        margin-block: 26px;
+    
+    }
+
+    @media (min-width: 426px) and (max-width: 600px) {
+        margin-block: 26px;
+    
+    }
+
+    @media (min-width: 601px) and (max-width: 768px) {
+        margin-block: 26px;
+    }
+}
+
+.ct_cardTarifas2 {
+    background-color: var(--colorFondoTarjetas);
+    box-shadow: var(--sombraTarjeta);
+    border-radius: var(--borderRadiusGrande);
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 10px var(--colorPrecio);
+
+    @media (width < 320px) {
+        transform: translateX(250px);
+        min-width: 75%; /* Cada tarjeta ocupa un ancho mínimo del 85% */
+        flex-shrink: 1; /* Evita que las tarjetas se reduzcan */
+        margin-block: 26px;
+    }
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (min-width: 321px) and (max-width: 375px) {
+        margin-block: 26px;
+    }
+
+    @media (min-width: 376px) and (max-width: 425px) {
+        margin-block: 26px;
+    }
+
+    @media (min-width: 426px) and (max-width: 600px) {
+        margin-block: 26px;
+    }
+
+    @media (min-width: 601px) and (max-width: 768px) {
+        margin-block: 26px;
+    }
+
+}
+
+.ct_cardTarifas3 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorFondoTarjetas);
+    box-shadow: var(--sombraTarjeta);
+    border-radius: var(--borderRadiusGrande);
+    padding: 20px;
+
+    @media (width < 320px) {
+        transform: translateX(250px);
+        min-width: 75%; /* Cada tarjeta ocupa un ancho mínimo del 85% */
+        flex-shrink: 1; /* Evita que las tarjetas se reduzcan */
+        margin-block: 26px;
+        margin-right: 50px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (min-width: 321px) and (max-width: 375px) {
+        margin-block: 26px;
+    }
+
+    @media (min-width: 376px) and (max-width: 425px) {
+        margin-block: 26px;
+    
+    }
+
+    @media (min-width: 426px) and (max-width: 600px) {
+        margin-block: 26px;
+    }
+
+    @media (min-width: 601px) and (max-width: 768px) {
+        margin-block: 26px;
+    
+    }
+}
+
+
+.ct_cardTarifas4 {
+    background-color: var(--colorFondoTarjetas);
+    box-shadow: var(--sombraTarjeta);
+    border-radius: var(--borderRadiusGrande);
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 10px var(--colorPrecio);
+}
+
+/* Titulo y descripción de la oferta*/
+.ct_tituloEinfo{
+    font-weight: 500;
+    button {
+        cursor: pointer;
+    }
+}
+
+
+.ct_tituloYdesc {
+    text-align: center;
+    h2 {
+        font-weight: 500;
+    }
+    p {
+        text-wrap: balance;
+        font-weight: 100;
+    }
+}
+
+
+/* Precio */
+.ct_precio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+.ct_precioGratis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.ct_signoDolar {
+    font-size: 20px;
+}
+.ct_valor {
+    font-size: 40px;
+    color: var(--colorPrecio);
+    font-weight: 700;
+}
+
+.ct_valorGratuito {
+    font-size: 40px;
+    color: #3483fa63;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+/* Botón de COMPRAR */
+.ct_btnCompra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 10px;
+}
+.btn-comprar {
+    background-color: var(--colorBtn);
+    width: 100%;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--borderRadiusGrande);
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--colorBtnHover);
+        color: white;
+    }
+}
+
+
+
+
+/* Detalle de contenido en la compra */
+.ct_detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
+
+/* Este estilo sirve para que cuando el texto haga salto de linea
+se ponga inmediatamente por debajo del mismo sin ocupar el espacio del check*/
+.icon-texto {
+    display: inline-flex; /* Alinea el ícono y el texto en la misma línea */
+    align-items: flex-start; /* Alinea el texto con el borde superior del ícono */
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    span {
+        display: inline-block;
+    }
+}
+
+
+
+/* Titulo de los detalles e icono de Info */
+.ct_tituloEinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+/* Móviles pequeños (hasta 320px) */
+
+
+/* Móviles medianos (321px a 375px) */
+
+
+/* Tablets pequeñas (376px a 425px) */
+
+
+/* Tablets pequeñas (426px a 600px) */
+
+
+/* Tablets pequeñas (601px a 768px) */
+

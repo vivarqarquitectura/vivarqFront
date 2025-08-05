@@ -1,0 +1,89 @@
+.avatar-container {
+    width: 45px;  
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid var(--colorBtn); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.avatar-container:hover {
+    border-color: #7fd4ff;
+}
+
+.avatar-image {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+
+.avatar-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*MENU DESPLEGABLE*/
+.menu-opciones {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+.menu-opciones ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu-opciones li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-opciones li:hover {
+    background: #f1f1f1;
+}
+
+.opcion-cerrar-sesion {
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+    color: red;
+}

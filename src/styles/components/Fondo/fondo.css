@@ -1,0 +1,44 @@
+.fondo {
+    position: absolute;           /* Se mueve la imagen fuera del flujo fijo */
+    top: 0;                        /* Coloca la imagen en la parte superior */
+    left: 0;                       /* Alinea la imagen con el borde izquierdo */
+    width: 100%;                   /* La imagen ocupará todo el ancho del viewport */
+    height: 100dvh;                 /* La imagen ocupará todo el alto del primer viewport */
+    object-fit: cover;             /* Ajusta la imagen para cubrir todo el área sin distorsionar */
+    z-index: -1;                   /* Asegura que la imagen esté detrás de los demás elementos */
+    filter: blur(3px);             /* Aplica un desenfoque a la imagen */
+}
+
+.carrusel-de-fondos {
+    height: 100vh; /* Ejemplo: altura completa de la ventana */
+}
+
+.carrusel-de-fondos .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+/* Asegúrate de que el contenedor esté posicionado en el fondo */
+.carrusel-wrapper {
+    position: absolute; /* Esto lo saca del flujo normal y lo posiciona en relación a su contenedor padre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ajusta según sea necesario */
+    z-index: -1; /* Esto coloca el carrusel detrás de otros elementos */
+    filter: blur(3px); 
+}
+
+/* Asegúrate de que el carrusel se comporte correctamente */
+.carrusel-de-imagenes {
+    width: 100%;
+    height: 100%;
+}
+
+.fondo-imagen {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh; /* Ajusta según tu diseño */
+}

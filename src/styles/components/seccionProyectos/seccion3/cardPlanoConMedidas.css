@@ -1,0 +1,321 @@
+.cpm_cardPlanoConMedidas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 26px;
+    border-radius: var(--borderRadiusGrande);
+    background-color: var(--colorTarjeta);
+    box-shadow: var(--sombraTarjeta);
+}
+
+.cpm_img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cpm_img img {
+    border: none;
+}
+
+.cpm_txtYbtn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.cpm_txtYbtn h2 {
+    font-weight: 500;
+}
+
+
+/* Añadiendo las clases para crear el "modal"*/
+.cpm_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.cpm_cerrarModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.cpm_contenidoModal {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: auto;
+    gap: 20px; /* Espacio entre las columnas */
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 80%;
+    overflow-y: auto;
+}
+
+.cpm_imagenesEnModal1 {
+    display: grid;
+    grid-template-columns: 1fr; /* Columna para texto */
+    gap: 20px;
+    width: 100%;
+    text-wrap: balance;
+}
+
+.cpm_imagenesEnModal1 h2 {
+    font-size: xx-large;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.cpm_imagenesEnModal1 p {
+    text-wrap: wrap;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 100;
+    margin: 0;
+}
+
+.cpm_imagenesEnModal {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna por defecto */
+    gap: 10px; /* Espacio entre las imágenes */
+    width: 100%;
+    height: 100%;
+}
+
+.cpm_imagenesEnModal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--borderRadiusGrande);
+    border: solid 2px gray;
+}
+
+.cpm_imagenes1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para las imágenes */
+    height: 100%;
+    gap: 10px;
+}
+
+.cpm_imagenes1 img {
+    width: 100%;
+    height: 100%; /* Mantiene la relación de aspecto */
+    object-fit: cover;
+    border-radius: var(--borderRadiusGrande);
+    border: solid 2px gray;
+}
+
+
+/* Móviles pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .cpm_txtYbtn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        height: 70px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .cpm_txtYbtn h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    /* Añadiendo las clases para crear el "modal"*/
+    .cpm_contenidoModal {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espacio entre las columnas */
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+        max-width: 95%;
+        height: 100dvh;
+        overflow-y: auto;
+    }
+    
+    .cpm_imagenesEnModal1 h2 {
+        font-size: x-large;
+        margin: 0;
+        padding: 10px 0;
+        line-height: 35px;
+        text-wrap: wrap;
+        text-align: center;
+    }
+    
+    .cpm_imagenesEnModal1 p {
+        text-wrap: wrap;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 100;
+        margin: 0;
+    }
+}
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .cpm_txtYbtn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        height: 70px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .cpm_txtYbtn h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    /* Añadiendo las clases para crear el "modal"*/
+    .cpm_contenidoModal {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espacio entre las columnas */
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+        max-width: 95%;
+        height: 100dvh;
+        overflow-y: auto;
+    }
+    
+    .cpm_imagenesEnModal1 h2 {
+        font-size: x-large;
+        margin: 0;
+        padding: 10px 0;
+        line-height: 35px;
+        text-wrap: wrap;
+        text-align: center;
+    }
+    
+    .cpm_imagenesEnModal1 p {
+        text-wrap: wrap;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 100;
+        margin: 0;
+    }
+}
+
+/* Tablets pequeñas (376px a 425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+    .cpm_txtYbtn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        height: 70px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .cpm_txtYbtn h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    /* Añadiendo las clases para crear el "modal"*/
+    .cpm_contenidoModal {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espacio entre las columnas */
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+        max-width: 95%;
+        height: 100dvh;
+        overflow-y: auto;
+    }
+    
+    .cpm_imagenesEnModal1 h2 {
+        font-size: x-large;
+        margin: 0;
+        padding: 10px 0;
+        line-height: 35px;
+        text-wrap: wrap;
+        text-align: center;
+    }
+    
+    .cpm_imagenesEnModal1 p {
+        text-wrap: wrap;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 100;
+        margin: 0;
+    }
+}
+
+/* Tablets pequeñas (426px a 600px) */
+@media (min-width: 426px) and (max-width: 600px) {
+    .cpm_txtYbtn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        height: 70px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .cpm_txtYbtn h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    /* Añadiendo las clases para crear el "modal"*/
+    .cpm_contenidoModal {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espacio entre las columnas */
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+        max-width: 80%;
+        height: 100dvh;
+        overflow-y: auto;
+    }
+    
+    .cpm_imagenesEnModal1 h2 {
+        font-size: xx-large;
+        margin: 0;
+        padding: 10px 0;
+        line-height: 35px;
+        text-wrap: wrap;
+        text-align: left;
+    }
+    
+    .cpm_imagenesEnModal1 p {
+        text-wrap: wrap;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 100;
+        margin: 0;
+    }
+}

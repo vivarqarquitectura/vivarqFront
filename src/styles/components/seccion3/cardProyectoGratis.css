@@ -1,0 +1,384 @@
+.proyectoGratis {
+    display: flex;
+    border-radius: var(--borderRadiusGrande);
+    width: 100%;
+    height: 200px;
+    box-shadow: var(--sombraTarjeta); /* Sombra suave */
+    position: relative; /* Asegura que el contenedor sirva como referencia */
+    user-select: none;
+}
+
+.fotos {
+    position: relative; /* Permite que las imágenes se posicionen de manera absoluta */
+    width: 300px;
+    height: 100%;
+}
+
+.fotos img {
+    position: absolute; /* Superpone las imágenes */
+    top: 0; /* Alinea con la parte superior del contenedor */
+    left: 0; /* Alinea con el borde izquierdo */
+    width: 100%; /* Ajusta el ancho al contenedor */
+    height: 100%; /* Rellena toda la altura del contenedor */
+    object-fit: cover; /* Ajusta las imágenes para cubrir el área sin distorsión */
+    border-radius: var(--borderRadiusGrande);
+    border: none;
+    
+}
+
+.fotos img:nth-child(2) {
+    transform: translateX(90px); /* Desplaza ligeramente la segunda imagen */
+    z-index: 1; /* Coloca la segunda imagen detrás de la primera */
+}
+
+.fotos img:nth-child(3) {
+    transform: translateX(180px); /* Desplaza ligeramente la segunda imagen */
+    z-index: 2; /* Coloca la segunda imagen detrás de la primera */
+}
+.textosYcta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: self-start;
+    margin: 26px;
+    margin-left: 220px;
+}
+
+.textosYcta  h1{
+    font-size: 1.6rem;
+    line-height: 30px;
+}
+
+.textosYcta  p{
+    font-weight: 100;
+}
+
+/* Móviles pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .proyectoGratis {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .fotos {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .fotos img {
+        
+        top: 0; /* Alinea con la parte superior del contenedor */
+        left: 0; /* Alinea con el borde izquierdo */
+        width: 100%;
+        height: 100%; /* Rellena toda la altura del contenedor */
+        object-fit: cover; /* Ajusta las imágenes para cubrir el área sin distorsión */
+        border-radius: var(--borderRadiusGrande);
+        border: none;
+        
+    }
+    
+    .fotos img:nth-child(2) {
+        transform: translateY(100px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 1; /* Coloca la segunda imagen detrás de la primera */
+    }
+    
+    .fotos img:nth-child(3) {
+        transform: translateY(200px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 2; /* Coloca la segunda imagen detrás de la primera */
+    }
+    .textosYcta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+        margin: 26px;
+        text-align: center;
+    }
+    .textosYcta h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 35px;
+    }
+    .textosYcta p {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .proyectoGratis {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .fotos {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .fotos img {
+        
+        top: 0; /* Alinea con la parte superior del contenedor */
+        left: 0; /* Alinea con el borde izquierdo */
+        width: 100%;
+        height: 100%; /* Rellena toda la altura del contenedor */
+        object-fit: cover; /* Ajusta las imágenes para cubrir el área sin distorsión */
+        border-radius: var(--borderRadiusGrande);
+        border: none;
+        
+    }
+    
+    .fotos img:nth-child(2) {
+        transform: translateY(100px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 1; /* Coloca la segunda imagen detrás de la primera */
+    }
+    
+    .fotos img:nth-child(3) {
+        transform: translateY(200px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 2; /* Coloca la segunda imagen detrás de la primera */
+    }
+    .textosYcta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+        margin: 26px;
+        text-align: center;
+    }
+    .textosYcta h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 35px;
+    }
+    .textosYcta p {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+/* Tablets pequeñas (376px a 600px) */
+@media (min-width: 376px) and (max-width: 425px) {
+    .proyectoGratis {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .fotos {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .fotos img {
+        
+        top: 0; /* Alinea con la parte superior del contenedor */
+        left: 0; /* Alinea con el borde izquierdo */
+        width: 100%;
+        height: 100%; /* Rellena toda la altura del contenedor */
+        object-fit: cover; /* Ajusta las imágenes para cubrir el área sin distorsión */
+        border-radius: var(--borderRadiusGrande);
+        border: none;
+        
+    }
+    
+    .fotos img:nth-child(2) {
+        transform: translateY(100px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 1; /* Coloca la segunda imagen detrás de la primera */
+    }
+    
+    .fotos img:nth-child(3) {
+        transform: translateY(200px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 2; /* Coloca la segunda imagen detrás de la primera */
+    }
+    .textosYcta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+        margin: 26px;
+        text-align: center;
+    }
+    .textosYcta h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 35px;
+    }
+    .textosYcta p {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+/* Tablets pequeñas (376px a 600px) */
+@media (min-width: 376px) and (max-width: 600px) {
+    .proyectoGratis {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .fotos {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .fotos img {
+        
+        top: 0; /* Alinea con la parte superior del contenedor */
+        left: 0; /* Alinea con el borde izquierdo */
+        width: 100%;
+        height: 100%; /* Rellena toda la altura del contenedor */
+        object-fit: cover; /* Ajusta las imágenes para cubrir el área sin distorsión */
+        border-radius: var(--borderRadiusGrande);
+        border: none;
+        
+    }
+    
+    .fotos img:nth-child(2) {
+        transform: translateY(100px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 1; /* Coloca la segunda imagen detrás de la primera */
+    }
+    
+    .fotos img:nth-child(3) {
+        transform: translateY(200px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 2; /* Coloca la segunda imagen detrás de la primera */
+    }
+    .textosYcta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+        margin: 26px;
+        text-align: center;
+    }
+    .textosYcta h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 35px;
+    }
+    .textosYcta p {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+/* Tablets medianas (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .proyectoGratis {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .fotos {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .fotos img {
+        
+        top: 0; /* Alinea con la parte superior del contenedor */
+        left: 0; /* Alinea con el borde izquierdo */
+        width: 100%;
+        height: 100%; /* Rellena toda la altura del contenedor */
+        object-fit: cover; /* Ajusta las imágenes para cubrir el área sin distorsión */
+        border-radius: var(--borderRadiusGrande);
+        border: none;
+        
+    }
+    
+    .fotos img:nth-child(2) {
+        transform: translateY(100px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 1; /* Coloca la segunda imagen detrás de la primera */
+    }
+    
+    .fotos img:nth-child(3) {
+        transform: translateY(200px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 2; /* Coloca la segunda imagen detrás de la primera */
+    }
+    .textosYcta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+        margin: 26px;
+        text-align: center;
+    }
+    .textosYcta h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 35px;
+    }
+    .textosYcta p {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+/* Tablets pequeñas (769px a 929px) */
+@media (min-width: 769px) and (max-width: 929px)  {
+    .proyectoGratis {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .fotos {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .fotos img {
+        
+        top: 0; /* Alinea con la parte superior del contenedor */
+        left: 0; /* Alinea con el borde izquierdo */
+        width: 100%;
+        height: 100%; /* Rellena toda la altura del contenedor */
+        object-fit: cover; /* Ajusta las imágenes para cubrir el área sin distorsión */
+        border-radius: var(--borderRadiusGrande);
+        border: none;
+        
+    }
+    
+    .fotos img:nth-child(2) {
+        transform: translateY(100px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 1; /* Coloca la segunda imagen detrás de la primera */
+    }
+    
+    .fotos img:nth-child(3) {
+        transform: translateY(200px); /* Desplaza ligeramente la segunda imagen */
+        z-index: 2; /* Coloca la segunda imagen detrás de la primera */
+    }
+    .textosYcta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+        margin: 26px;
+        text-align: center;
+    }
+    .textosYcta h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 35px;
+    }
+    .textosYcta p {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}

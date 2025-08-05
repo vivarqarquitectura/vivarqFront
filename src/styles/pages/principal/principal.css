@@ -1,0 +1,1243 @@
+.formatoPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center; /* Para centrar todo el contenido, con ayuda de ".principal" con un width al 80% */
+    flex-wrap: wrap;
+}
+
+.principal {
+    display: grid;
+    align-items: start;
+    width: 80%;
+}
+
+.org-comp_principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
+}
+
+/* seccion reemplazo a la 2*/
+
+.seccion2a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    background-color: white;
+    border-radius: var(--borderRadiusGrande);
+    border: solid 1px var(--colorGrisGlobal);
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+        
+        pointer-events: none;
+        border-radius: 0 26px 26px 0;
+        z-index: -1;
+    }
+    & .planosConMedidas {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-right: 50px;
+        
+    }
+    & img {
+        width: 50%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 20px;
+        border-radius: var(--borderRadiusGrande);
+    }	
+    & h1 {
+        width: 100%;
+        padding-left: 30px;
+        padding-bottom: 26px;
+    }
+
+    & p {
+        width: 100%;
+        padding-left: 30px;
+        font-size: 1.2em;
+        text-align: balance;
+    }
+
+    
+}
+
+.seccion2b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    background-color: white;
+    border-radius: var(--borderRadiusGrande);
+    border: solid 1px var(--colorGrisGlobal);
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+        
+        pointer-events: none;
+        border-radius: 0 26px 26px 0;
+        z-index: -1;
+    }
+    & .planosConMedidas {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-right: 50px;
+        
+    }
+    & img {
+        width: 50%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 20px;
+        border-radius: var(--borderRadiusGrande);
+    }	
+    & h1 {
+        width: 100%;
+        padding-left: 30px;
+        padding-bottom: 26px;
+    }
+
+    & p {
+        width: 100%;
+        padding-left: 30px;
+        font-size: 1.2em;
+        text-align: balance;
+    }
+
+    
+}
+
+
+/* sección 2*/
+.seccion2 {
+    display: grid;
+    grid-template-areas: 
+        "tarjeta1 tarjeta2"
+        "tarjeta3 tarjeta2"; /* Tarjeta2 ocupa las dos columnas en la segunda fila */
+    margin-top: 100px;
+    grid-template-columns: repeat(2, 1fr); /* La primera columna es 1fr, la segunda es 2fr para que tarjeta2 ocupe dos columnas */
+    grid-template-rows: auto; /* Las filas se ajustan según el contenido */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    width: 80%;
+    justify-content: center; /* Centra el grid horizontalmente */
+    /* height: 100dvh; */
+}
+
+
+
+.tarjeta1 {
+    grid-area: tarjeta1; /* Se posiciona en la primera celda de la primera fila */
+    height: 100%; /* Hace que ocupe el 100% del alto de la fila */
+    display: flex;
+    /* ver info.md */
+    justify-content: space-between; /* Ajusta el contenido dentro de la tarjeta según el espacio */
+    align-items: stretch; /* Asegura que los elementos dentro de la tarjeta ocupen todo el ancho disponible */
+
+}
+
+.tarjeta2 {
+    grid-area: tarjeta2; /* Se posiciona en la segunda celda de la primera fila, y ocupa ambas columnas en la segunda fila */
+    grid-row: span 2; /* Asegura que la tarjeta ocupe dos filas */
+    height: 100%; /* Asegura que ocupe el 100% de la altura asignada */
+    display: flex;
+    /* ver info.md */
+    justify-content: space-between;
+    align-items: stretch; /* Asegura que el contenido se estire para llenar la altura */
+
+}
+
+.tarjeta3 {
+    grid-area: tarjeta3; /* Se posiciona en la primera celda de la segunda fila */
+    height: 100%; /* Asegura que ocupe el 100% del alto de la fila */
+    display: flex;
+    /* ver info.md */
+    justify-content: space-between; /* Ajusta el contenido dentro de la tarjeta según el espacio */
+    align-items: stretch; /* Asegura que los elementos dentro de la tarjeta ocupen todo el ancho disponible */
+
+}
+
+/* seccion 3 */
+.cardProyectoGratis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    width: 80%;
+}
+
+
+/* sección 4 */
+.cardProyectos {
+    display: grid;
+    width: 80%;
+    justify-items: center;
+    margin-top: 100px;
+    gap: 20px; /* Espaciado entre las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Asegura un ancho mínimo cómodo */
+    padding: 20px; /* Espaciado interno del contenedor */
+    align-items: stretch; /* Las tarjetas llenan toda la altura de su celda */
+}
+
+.cardProyectos > * {
+    min-width: 250px; /* Define un ancho mínimo para evitar el colapso */
+    flex-grow: 1; /* Opcional: si usas componentes flexibles */
+}
+
+/* seccion 5 */
+.formasDePago {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 100px;
+}
+
+/* seccion 6 */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    margin-top: 100px;
+    width: 100%;
+}
+
+@media (width <= 320px){
+        
+    }
+
+@media (width <= 320px){
+
+}
+
+/* Móviles pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .formatoPrincipal {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center; /* Para centrar todo el contenido, con ayuda de ".principal" con un width al 80% */
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .principal {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .org-comp_principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
+    }
+    
+    /* SECCION 2 */
+    .seccion2a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+
+    .seccion2b {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+    /* .seccion2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    } */
+
+    /* SECCION 3 */
+    .cardProyectoGratis {
+        margin-top: 50px;
+        height: auto;
+    }
+    
+
+    /* SECCION 4 */
+    .cardProyectos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    /* SECCION 5*/
+    .formasDePago {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    /*  SECCION 6 */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        margin-top: 100px;
+        width: 100%;
+    }
+    
+}
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .formatoPrincipal {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center; /* Para centrar todo el contenido, con ayuda de ".principal" con un width al 80% */
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .principal {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .org-comp_principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
+    }
+    
+    /* SECCION 2 */
+    .seccion2a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+
+    .seccion2b {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+    /* .seccion2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    } */
+
+    /* SECCION 3 */
+    .cardProyectoGratis {
+        margin-top: 50px;
+        height: auto;
+    }
+    
+
+    /* SECCION 4 */
+    .cardProyectos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    /* SECCION 5*/
+    .formasDePago {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    /*  SECCION 6 */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        margin-top: 100px;
+        width: 100%;
+    }
+}
+
+/* Móviles grandes (376px a 425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+    .formatoPrincipal {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center; /* Para centrar todo el contenido, con ayuda de ".principal" con un width al 80% */
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .principal {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .org-comp_principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
+    }
+    
+    /* SECCION 2 */
+    .seccion2a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+
+    .seccion2b {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+    /* .seccion2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    } */
+
+    /* SECCION 3 */
+    .cardProyectoGratis {
+        margin-top: 50px;
+        height: auto;
+    }
+    
+
+    /* SECCION 4 */
+    .cardProyectos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    /* SECCION 5*/
+    .formasDePago {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    /*  SECCION 6 */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        margin-top: 100px;
+        width: 100%;
+    }
+}
+
+/* Tablets pequeñas (426px a 600px) */
+@media (min-width: 426px) and (max-width: 600px) {
+    .formatoPrincipal {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center; /* Para centrar todo el contenido, con ayuda de ".principal" con un width al 80% */
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .principal {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .org-comp_principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
+    }
+    
+    /* SECCION 2 */
+    .seccion2a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+
+    .seccion2b {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+    /* .seccion2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    } */
+
+    /* SECCION 3 */
+    .cardProyectoGratis {
+        margin-top: 50px;
+        height: auto;
+    }
+    
+
+    /* SECCION 4 */
+    .cardProyectos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    /* SECCION 5*/
+    .formasDePago {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    /*  SECCION 6 */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        margin-top: 100px;
+        width: 100%;
+    }
+}
+
+/* Tablets pequeñas (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .formatoPrincipal {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center; /* Para centrar todo el contenido, con ayuda de ".principal" con un width al 80% */
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .principal {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 80%;
+        overflow-x: hidden;
+    }
+    .org-comp_principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
+    }
+    
+    /* SECCION 2 */
+    .seccion2a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+
+    .seccion2b {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        padding-bottom: 26px;/*Solo bottom porque la imagen ya tiene un margin*/
+        width: 90%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            border-radius: 0 26px 26px 0;
+            z-index: -1;
+        }
+
+        & .planosConMedidas {
+            width: 90%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0px;
+
+        }
+        & img {
+            width: 90%;
+            height: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 20px;
+            border-radius: var(--borderRadiusGrande);
+        }	
+        & h1 {
+            width: 100%;
+            font-size: 1.2em;
+            text-align: center;
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+    
+        & p {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 1em;
+            text-align: balance;
+        }
+    }
+    /* .seccion2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    } */
+
+    /* SECCION 3 */
+    .cardProyectoGratis {
+        margin-top: 50px;
+        height: auto;
+    }
+    
+
+    /* SECCION 4 */
+    .cardProyectos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    /* SECCION 5*/
+    .formasDePago {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    /*  SECCION 6 */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        margin-top: 100px;
+        width: 100%;
+    }
+}
+
+
+/* Tablets grandes y desktop pequeños (769px a 929px) */
+@media (min-width: 769px) and (max-width: 929px) {
+    .formatoPrincipal {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center; /* Para centrar todo el contenido, con ayuda de ".principal" con un width al 80% */
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .principal {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .org-comp_principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+        height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
+    }
+    /* SECCION 2 */
+    .seccion2{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    /* SECCION 3 */
+    .cardProyectoGratis {
+        margin-top: 50px;
+        height: auto;
+    }
+    
+
+    /* SECCION 4 */
+    .cardProyectos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    /* SECCION 5*/
+    .formasDePago {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    /*  SECCION 6 */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        margin-top: 100px;
+        width: 100%;
+    }
+    
+}
+
+/* desktop medianos a grandes (930px) */
+@media (min-width: 930px) {
+    /* sección 2*/
+    .seccion2 {
+        display: grid;
+        grid-template-areas: 
+            "tarjeta1 tarjeta2"
+            "tarjeta3 tarjeta2"; /* Tarjeta2 ocupa las dos columnas en la segunda fila */
+        margin-top: 100px;
+        grid-template-columns: repeat(2, 1fr); /* La primera columna es 1fr, la segunda es 2fr para que tarjeta2 ocupe dos columnas */
+        grid-template-rows: auto; /* Las filas se ajustan según el contenido */
+        gap: 20px; /* Espaciado entre las tarjetas */
+        width: 80%;
+        justify-content: center; /* Centra el grid horizontalmente */
+        height: 100dvh;
+    }
+}

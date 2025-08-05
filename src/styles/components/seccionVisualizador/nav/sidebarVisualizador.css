@@ -1,0 +1,307 @@
+.sidebarVisualizador {
+    display: flex;
+    height: 95dvh;
+    width: 300px;
+    padding-left: 60px;
+    background-color: var(--colorBlancoGlobal);
+    border-radius: var(--borderRadiusGrande);
+    box-shadow: var(--sombraTarjeta);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 100;
+    user-select: none;
+    &.oculto2 {
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+        height: 95dvh;
+        position: absolute;
+
+    }
+    &.visible2 {
+        transform: translateX(0);
+        opacity: 1; 
+        pointer-events: auto; 
+        position: relative;
+    }
+    
+    @media (width <= 425px) {
+        display: flex;
+        min-height: 50%;
+        max-height: 100%;
+        width: 100%;
+        padding-inline: 10px;
+        box-shadow: var(--sombraNavVisualizador);
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+
+        &.oculto2 {
+            transform: translateY(100%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            position: absolute;
+            min-height: 50%;
+            max-height: 50%;
+    
+        }
+        &.visible2 {
+            transform: translateY(0);
+            opacity: 1; 
+            visibility: visible;
+            pointer-events: auto; 
+            position: relative;
+        }
+    }
+
+    
+}
+
+
+.menuIconos {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorNavVisualizador);
+    border-radius: var(--borderRadiusGrande);
+    flex-basis: 60px;
+    min-width: 60px;
+    height: 95dvh;
+    padding-block: 20px;
+    font-size: xx-large;
+    color: white;
+    z-index: 9999;
+
+    &.visibleIco {
+        pointer-events: auto; 
+        display: visible;
+    }
+    &.ocultoIco {
+        position: relative;
+        
+    }
+    @media (width <= 425px) {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 50%;
+        border-radius: 26px 26px 0 0;
+        font-size: 1.5rem;
+    }
+
+}
+
+.icoToggle {
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-bottom: solid 1px white;
+    cursor: pointer;
+    user-select: none;
+    >.contenedorIcono {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 10%;
+        transition: transform 0.6s ease-in-out, background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; 
+    }
+    > .contenedorIcono:hover {
+        background-color: rgb(248, 248, 248);
+        color: var(--colorNavVisualizador);
+        
+    }
+    @media (width <= 425px){
+        display: flex;
+        width: auto;
+        padding: 0;        
+        margin: 0;
+        width: 30%;
+        border-bottom: none;
+        user-select: none;
+        > .contenedorIcono {
+            width: auto;
+            height: auto;
+        }
+
+    }
+}
+
+.icoOpciones {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    flex-grow: 1;
+    padding-top: 25px;
+    gap: 25px;
+    user-select: none;
+    @media (width <= 425px) {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-content: space-between;
+        gap: 0;
+        padding-top: 0;
+        gap: 10px;
+    }
+}
+
+.icoMisProyectos {
+    display: flex;
+    padding-top: 15px;
+    justify-content: center;
+    width: 70%;
+    border-top: solid 1px white;
+    user-select: none;
+    @media (width <= 425px) {
+        width: 30%;
+        padding: 0;        
+        margin: 0;
+        border-top: none;
+    }
+}
+
+
+/*MENU DE OPCIONES "LISTADO"*/
+
+.menuOpciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-inline: 15px;
+    padding-block: 20px;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+
+    &.oculto2 {
+        transform: translateX(-100%); /* Oculta el menú moviéndolo fuera de la pantalla */
+        opacity: 0; /* Hace que el menú sea invisible */
+        pointer-events: none; /* Desactiva la interacción */
+        
+    }
+    
+    &.visible2 {
+        transform: translateX(0); /* Muestra el menú en su posición original */
+        opacity: 1; /* Hace que el menú sea visible */
+        pointer-events: auto; /* Activa la interacción */
+    }
+
+    @media (width <= 425px) {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        &.oculto2 {
+            transform: translateY(100%); 
+            opacity: 0; 
+            visibility: hidden;
+            pointer-events: none;
+            
+        }
+        
+        &.visible2 {
+            transform: translateY(0); 
+            opacity: 1; 
+            visibility: visible;
+            pointer-events: auto; 
+        }
+    }
+    
+}
+
+
+.opcionTitulo {
+    display: flex;
+    width: 100%;
+    padding-bottom: 15px;
+    justify-content: left;
+    border-bottom: solid 1px #cfcfcf;
+}
+
+.opcionTitulo h1 {
+    font-family: 'Poppins';
+    font-weight: 400;
+    user-select: none;
+}
+
+.opcionCategoria {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    flex-grow: 1;
+    padding-top: 25px;
+    overflow-y: auto;
+}
+
+.opcionCategoria h3 {
+    font-family: 'Poppins';
+    font-weight: 500;
+    user-select: none;
+}
+
+.opcionCategoria ul {
+    list-style: none; 
+    position: relative;
+    font-family: 'Poppins';
+    user-select: none;
+}
+
+.opcionCategoria ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* Transición suave */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    user-select: none;
+}
+
+.opcionCategoria ul li:hover {
+    background-color: rgb(187, 216, 230); /* Color claro al pasar el cursor */
+    border-radius: 0 10px 10px 0;
+}
+
+
+.opcionCategoria ul li:last-child {
+    margin-bottom: 0; /* Elimina el margen del último elemento si no deseas separación extra */
+}
+
+.opcionCategoria ul li::before {
+    content: ''; 
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    bottom: 0;
+    width: 4px;
+    border-radius: 1px;
+    background-color: #cfcfcf;
+}
+
+.opcionMisProyectos {
+    display: flex;
+    padding-top: 10px;
+    width: 100%;
+    border-top: solid 1px #cfcfcf;
+    user-select: none;
+}
+
+.opcionMisProyectos h1{
+    font-family: 'Poppins';
+    font-weight: 400;
+    
+}
+
+/*Manejando la visibilidad de los menus
+para ocultar en cuanto no esté disponible*/
+
+.oculto {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+

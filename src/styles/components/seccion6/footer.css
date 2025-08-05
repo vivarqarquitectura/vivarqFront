@@ -1,0 +1,170 @@
+.f_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px;
+}
+
+.f_logo,
+.f_contacto,
+.f_redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.f_contacto {
+    padding-left: 20px;
+}
+
+.f_logo {
+    padding-right: 50px;
+    border-right: solid 1px rgba(255, 255, 255, 0.1);
+    user-select: none;
+}
+
+.f_logo p,
+.f_contacto p,
+.f_redes p {
+    color: white;
+}
+
+.f_logo h3 ,
+.f_contacto h3 ,
+.f_redes h3  {
+    color: white;
+}
+
+/* Móviles pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .f_footer  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 50px;
+    }
+
+    .f_logo {
+        padding-right: 0;
+        padding-bottom: 26px;
+        border-right: none;
+        user-select: none;
+    }
+
+    .f_logo,
+    .f_contacto,
+    .f_redes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f_contacto {
+        padding-left: 0px;
+        padding-bottom: 26px;
+    }
+}
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .f_footer  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 50px;
+    }
+
+    .f_logo {
+        padding-right: 0;
+        padding-bottom: 26px;
+        border-right: none;
+        user-select: none;
+    }
+
+    .f_logo,
+    .f_contacto,
+    .f_redes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f_contacto {
+        padding-left: 0px;
+        padding-bottom: 26px;
+    }
+}
+
+/* Tablets pequeñas (376px a 425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+    .f_footer  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 50px;
+    }
+
+    .f_logo {
+        padding-right: 0;
+        padding-bottom: 26px;
+        border-right: none;
+        user-select: none;
+    }
+
+    .f_logo,
+    .f_contacto,
+    .f_redes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f_contacto {
+        padding-left: 0px;
+        padding-bottom: 26px;
+    }
+}
+
+/* Tablets pequeñas (426px a 600px) */
+@media (min-width: 426px) and (max-width: 600px) {
+    .f_footer  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 50px;
+    }
+
+    .f_logo {
+        padding-right: 0;
+        padding-bottom: 26px;
+        border-right: none;
+        user-select: none;
+    }
+
+    .f_logo,
+    .f_contacto,
+    .f_redes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f_contacto {
+        padding-left: 0px;
+        padding-bottom: 26px;
+    }
+}

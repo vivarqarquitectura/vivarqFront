@@ -1,0 +1,76 @@
+.tarjetaPerfilUsuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    box-shadow: var(--sombraTarjeta);
+    border-radius: var(--borderRadiusGrande);
+    height: 100%;
+    font-family: 'Poppins';
+}
+
+
+.imagenUsuario img {
+    width: 100%;
+    border: solid 4px rgb(77, 160, 220);
+    border-radius: var(--borderRadiusGrande);
+}
+
+.herramientaUsuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    overflow-y: auto;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        list-style: none;
+        width: 100%;
+
+        li {
+            padding-block: 10px;
+            cursor: pointer;
+            border-bottom: solid 1px gray;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none;
+
+            &:last-child {
+                border: none;
+            }
+
+            &:hover {
+                background-color: var(--colorHover);
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            a:focus {
+                color: var(--colorLink);
+            }
+
+            
+        }
+    }
+}
+
+
+
+.ctaUsuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-block: 26px;
+
+    button {
+        width: 100%;
+    }
+}

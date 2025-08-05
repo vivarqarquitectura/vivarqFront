@@ -1,0 +1,69 @@
+.contenedorPagos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+}
+
+
+.gridPagos {
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    align-items: stretch;
+    justify-content: center;
+    width: 80%;
+    column-gap: 30px;
+
+    
+        /* Móviles pequeños (menos de 321px) */
+        @media (width <= 320px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        /* Móviles medianos (321px a 375px) */
+        @media (min-width: 321px) and (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+        }
+        
+        /* Móviles grandes (376px a 425px) */
+        @media (min-width: 376px) and (max-width: 425px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+        }
+        
+        /* Tablets pequeñas (426px a 600px) */
+        @media (min-width: 426px) and (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+        }
+        
+        /* Tablets pequeñas (601px a 768px) */
+        @media (min-width: 601px) and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+        }
+        
+        /* Tablets grandes y desktop pequeños (769px a 929px) */
+        @media (min-width: 769px) and (max-width: 929px) {
+        }
+        
+        /* desktop medianos a grandes (930px) */
+        @media (min-width: 930px) {
+
+        }
+}

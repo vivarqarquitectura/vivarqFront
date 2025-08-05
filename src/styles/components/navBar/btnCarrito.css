@@ -1,0 +1,30 @@
+.btnCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    cursor: pointer;
+    padding: 10px;
+    border: solid 1px var(--colorGrisGlobal);
+    border-radius: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btnCarrito:hover {
+    background-color: var(--colorGrisGlobal);
+    
+}
+
+.btnCarrito button {
+    all: unset; 
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnCarrito button:hover {
+    background: none;
+}
+

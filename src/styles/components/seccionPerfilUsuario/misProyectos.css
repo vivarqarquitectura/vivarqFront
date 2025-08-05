@@ -1,0 +1,25 @@
+.misProyectos {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--sombraTarjeta);
+    border-radius: var(--borderRadiusGrande);
+    padding: 26px;
+    width: 75%;
+
+    h2 {
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+}
+
+
+.tarjetasDeMisProyectos {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+

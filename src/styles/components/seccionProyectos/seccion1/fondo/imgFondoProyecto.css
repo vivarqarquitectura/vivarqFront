@@ -1,0 +1,13 @@
+.fondo-imagen-proyecto {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: absolute;           /* Se mueve la imagen fuera del flujo fijo */
+    top: 0;                        /* Coloca la imagen en la parte superior */
+    left: 0;                       /* Alinea la imagen con el borde izquierdo */
+    width: 100%;                   /* La imagen ocupará todo el ancho del viewport */
+    height: 100dvh;                 /* La imagen ocupará todo el alto del primer viewport */
+    object-fit: cover;             /* Ajusta la imagen para cubrir todo el área sin distorsionar */
+    z-index: -1;                   /* Asegura que la imagen esté detrás de los demás elementos */
+    filter: blur(5px); 
+}

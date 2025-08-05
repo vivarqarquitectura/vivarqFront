@@ -1,0 +1,75 @@
+.error-container {
+    background-image: url(../../../assets/error404/error404.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 1rem;
+}
+
+.warning-tape {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffcc0019,
+    #ffcc0019 10px,
+    #33333380 10px,
+    #33333380 20px
+  );
+  backdrop-filter: blur(10px);
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.error-content {
+  max-width: 500px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.error-title {
+  font-size: 6rem;
+  color: white;
+  margin: 0;
+}
+
+.error-subtitle {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: black;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #0077b6;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.error-button:hover {
+  background: #023e8a;
+}

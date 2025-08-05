@@ -1,0 +1,65 @@
+/* Configuración del carrusel */
+.carrusel {
+    display: flex;
+    justify-content: center; /* Centra el carrusel */
+    align-items: center; /* Centra verticalmente */
+    position: relative; /* Necesario para botones de navegación */
+    max-width: 600px; /* Ajusta el ancho deseado */
+    height: 300px; /* Fija el alto */
+    margin: 0 auto; /* Centra el carrusel respecto al viewport */
+    overflow: visible; /* Oculta desbordes no deseados */
+}
+
+.swiper {
+    overflow: hidden;
+}
+
+/* Configuración del wrapper y slides */
+.swiper-wrapper {
+    display: flex; /* Asegura que los slides estén alineados horizontalmente */
+    justify-content: center;
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina rellenos */
+}
+
+.swiper-slide {
+    display: flex !important; /* Permite usar justify y align */
+    justify-content: center; /* Centra horizontalmente */
+
+}
+
+/* Botones de navegación */
+.swiper-button-prev,
+.swiper-button-next {
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta el centrado */
+    z-index: 10; /* Sobre contenido */
+    width: 40px; /* Ajusta ancho */
+    height: 40px; /* Ajusta alto */
+}
+
+/* Imagen */
+.imgPortada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px; /* Ancho fijo */
+    height: 300px; /* Alto fijo */
+    overflow: hidden;
+    border-radius: 26px; /* Opcional */
+    box-shadow: var(--sombraTarjeta);
+}
+
+.imgPortada img {
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: 100%;
+    object-fit: cover;
+
+    visibility: visible;
+    opacity: 0;
+}
+
+.imgPortada img.loaded {
+    visibility: visible;
+    opacity: 1;
+}

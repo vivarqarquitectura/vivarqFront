@@ -1,0 +1,337 @@
+.fp_formasDePago {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--colorFondoTarjetas);
+    box-shadow: var(--sombraTarjeta);
+    border-radius: var(--borderRadiusGrande);
+    padding: 50px;
+    height: 300px;
+    user-select: none;
+}
+
+.comoPagar,
+.comoDescargar,
+.soporte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.comoPagar h3,
+.comoDescargar h3,
+.soporte h3{
+    font-weight: 400;
+    font-size: x-large;
+    padding-block: 10px;
+}
+
+.comoPagar p,
+.comoDescargar p,
+.soporte p{
+    font-weight: 100;
+    font-size: medium;
+    padding-block: 10px;
+    text-wrap: balance;
+}
+
+.comoPagar,
+.comoDescargar {
+    border-right: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Móviles pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .fp_formasDePago {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--colorFondoTarjetas);
+        box-shadow: var(--sombraTarjeta);
+        border-radius: var(--borderRadiusGrande);
+        padding: 50px;
+        height: auto;
+        user-select: none;
+    }
+
+    .comoPagar,
+    .comoDescargar {
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .comoDescargar,
+    .soporte {
+        padding-top: 26px;
+    }
+
+    .comoPagar h3,
+    .comoDescargar h3,
+    .soporte h3{
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-block: 10px;
+    }
+
+    .comoPagar p,
+    .comoDescargar p,
+    .soporte p{
+        font-weight: 100;
+        font-size: medium;
+        padding-block: 10px;
+        text-wrap: balance;
+    }
+
+    .fp_faCreditCard,
+    .fp_faDownload,
+    .fp_faHeadset {
+        font-size: 3rem;
+    }
+}
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .fp_formasDePago {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--colorFondoTarjetas);
+        box-shadow: var(--sombraTarjeta);
+        border-radius: var(--borderRadiusGrande);
+        padding: 50px;
+        height: auto;
+        user-select: none;
+    }
+
+    .comoPagar,
+    .comoDescargar {
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .comoDescargar,
+    .soporte {
+        padding-top: 26px;
+    }
+
+    .comoPagar h3,
+    .comoDescargar h3,
+    .soporte h3{
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-block: 10px;
+    }
+
+    .comoPagar p,
+    .comoDescargar p,
+    .soporte p{
+        font-weight: 100;
+        font-size: medium;
+        padding-block: 10px;
+        text-wrap: balance;
+    }
+
+    .fp_faCreditCard,
+    .fp_faDownload,
+    .fp_faHeadset {
+        font-size: 3rem;
+    }
+}
+
+/* Tablets pequeñas (376px a 425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+    .fp_formasDePago {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--colorFondoTarjetas);
+        box-shadow: var(--sombraTarjeta);
+        border-radius: var(--borderRadiusGrande);
+        padding: 50px;
+        height: auto;
+        user-select: none;
+    }
+
+    .comoPagar,
+    .comoDescargar {
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .comoDescargar,
+    .soporte {
+        padding-top: 26px;
+    }
+
+    .comoPagar h3,
+    .comoDescargar h3,
+    .soporte h3{
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-block: 10px;
+    }
+
+    .comoPagar p,
+    .comoDescargar p,
+    .soporte p{
+        font-weight: 100;
+        font-size: medium;
+        padding-block: 10px;
+        text-wrap: balance;
+    }
+
+    .fp_faCreditCard,
+    .fp_faDownload,
+    .fp_faHeadset {
+        font-size: 3rem;
+    }
+}
+
+/* Tablets pequeñas (426px a 600px) */
+@media (min-width: 426px) and (max-width: 600px) {
+    .fp_formasDePago {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--colorFondoTarjetas);
+        box-shadow: var(--sombraTarjeta);
+        border-radius: var(--borderRadiusGrande);
+        padding: 50px;
+        height: auto;
+        user-select: none;
+    }
+
+    .comoPagar,
+    .comoDescargar {
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .comoDescargar,
+    .soporte {
+        padding-top: 26px;
+    }
+
+    .comoPagar h3,
+    .comoDescargar h3,
+    .soporte h3{
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-block: 10px;
+    }
+
+    .comoPagar p,
+    .comoDescargar p,
+    .soporte p{
+        font-weight: 100;
+        font-size: medium;
+        padding-block: 10px;
+        text-wrap: balance;
+    }
+
+    .fp_faCreditCard,
+    .fp_faDownload,
+    .fp_faHeadset {
+        font-size: 3rem;
+    }
+}
+
+/* Tablets pequeñas (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .fp_formasDePago {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--colorFondoTarjetas);
+        box-shadow: var(--sombraTarjeta);
+        border-radius: var(--borderRadiusGrande);
+        padding: 50px;
+        height: auto;
+        user-select: none;
+    }
+
+    .comoPagar,
+    .comoDescargar {
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .comoDescargar,
+    .soporte {
+        padding-top: 26px;
+    }
+
+    .comoPagar h3,
+    .comoDescargar h3,
+    .soporte h3{
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-block: 10px;
+    }
+
+    .comoPagar p,
+    .comoDescargar p,
+    .soporte p{
+        font-weight: 100;
+        font-size: medium;
+        padding-block: 10px;
+        text-wrap: balance;
+    }
+
+    .fp_faCreditCard,
+    .fp_faDownload,
+    .fp_faHeadset {
+        font-size: 3rem;
+    }
+}
+
+/* Tablets pequeñas (769px a 929px) */
+@media (min-width: 769px) and (max-width: 929px)  {
+    .fp_formasDePago {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--colorFondoTarjetas);
+        box-shadow: var(--sombraTarjeta);
+        border-radius: var(--borderRadiusGrande);
+        padding: 50px;
+        height: auto;
+        user-select: none;
+    }
+
+    .comoPagar,
+    .comoDescargar {
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .comoDescargar,
+    .soporte {
+        padding-top: 26px;
+    }
+
+    .comoPagar h3,
+    .comoDescargar h3,
+    .soporte h3{
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-block: 10px;
+    }
+
+    .comoPagar p,
+    .comoDescargar p,
+    .soporte p{
+        font-weight: 100;
+        font-size: medium;
+        padding-block: 10px;
+        text-wrap: balance;
+    }
+
+    .fp_faCreditCard,
+    .fp_faDownload,
+    .fp_faHeadset {
+        font-size: 3rem;
+    }
+}

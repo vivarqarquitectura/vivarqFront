@@ -1,0 +1,216 @@
+.tarjetaGuiaDinamica {
+    display: flex;    
+    flex-direction: column;
+    background-color: var(--colorTarjetasGuias);
+    border-radius: var(--borderRadiusGrande);
+    color: black;
+    box-shadow: var(--sombraTarjeta);
+    padding: 26px;
+    width: 100%;
+    user-select: none;
+    row-gap: 10px;
+}
+
+.imagenesX1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%; /* O una altura fija si es necesario */
+}
+
+
+
+
+.imagenesX3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: 100%; /* O una altura fija si es necesario */
+}
+
+
+.imagenesX1 img, 
+.imagenesX3 img {
+    width: 100%;
+    height: 100%; /* Rellena todo el espacio disponible del contenedor */
+    object-fit: cover; /* Escala y recorta la imagen para que cubra el área */
+    border-radius: var(--borderRadiusGrande);
+    border: none;
+}
+
+
+/* Móviles pequeños (hasta 320px) */
+@media (min-width: 320px) {
+    .tarjetaGuiaDinamica {
+        padding: 15px;
+    }
+
+    .tarjetaGuiaDinamica h1 {
+        font-size: 1.1rem;
+    }
+
+    .tarjetaGuiaDinamica p {
+        font-size: 1rem;
+        font-weight: 100;
+        text-wrap: stable;
+    }
+
+    .imagenesX3 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .tarjetaGuiaDinamica {
+        padding: 15px;
+    }
+
+    .tarjetaGuiaDinamica h1 {
+        font-size: 1.1rem;
+    }
+
+    .tarjetaGuiaDinamica p {
+        font-size: 1rem;
+        font-weight: 100;
+        text-wrap: stable;
+    }
+
+    .imagenesX3 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* Tablets pequeñas (376px a 425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+    .tarjetaGuiaDinamica {
+        padding: 15px;
+    }
+
+    .tarjetaGuiaDinamica h1 {
+        font-size: 1.1rem;
+    }
+
+    .tarjetaGuiaDinamica p {
+        font-size: 1rem;
+        font-weight: 100;
+        text-wrap: stable;
+    }
+
+    .imagenesX3 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Tablets medianas (426px a 600px) */
+@media (min-width: 426px) and (max-width: 600px) {
+    .tarjetaGuiaDinamica {
+        padding: 15px;
+    }
+
+    .tarjetaGuiaDinamica h1 {
+        font-size: 1.1rem;
+    }
+
+    .tarjetaGuiaDinamica p {
+        font-size: 1rem;
+        font-weight: 100;
+        text-wrap: stable;
+    }
+
+    .imagenesX3 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Tablets grandes (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .tarjetaGuiaDinamica {
+        padding: 15px;
+    }
+
+    .tarjetaGuiaDinamica h1 {
+        font-size: 1.1rem;
+    }
+
+    .tarjetaGuiaDinamica p {
+        font-size: 1rem;
+        font-weight: 100;
+        text-wrap: stable;
+    }
+
+    .imagenesX3 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* Tablets pequeñas (769px a 929px) */
+@media (min-width: 769px) and (max-width: 929px)  {
+    .tarjetaGuiaDinamica {
+        display: flex;    
+        flex-direction: column;
+        background-color: var(--colorTarjetasGuias);
+        border-radius: var(--borderRadiusGrande);
+        color: var(--colorTxtTarjetas);
+        box-shadow: var(--sombraTarjeta);
+        padding: 26px;
+        width: 100%;
+        user-select: none;
+    }
+    
+    .imagenesX1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        height: 100%; /* O una altura fija si es necesario */
+    }
+    
+    
+    
+    
+    .imagenesX3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+        height: 100%; /* O una altura fija si es necesario */
+    }
+    
+    
+    .imagenesX1 img, 
+    .imagenesX3 img {
+        width: 100%;
+        height: 100%; /* Rellena todo el espacio disponible del contenedor */
+        object-fit: cover; /* Escala y recorta la imagen para que cubra el área */
+        border-radius: var(--borderRadiusGrande);
+        border: none;
+    }
+}
+
+
+/* Tablets pequeñas (769px a 929px) */
+@media (min-width: 930px)  {
+    .imagenesX3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+        height: 100%; /* O una altura fija si es necesario */
+    }
+    
+
+}

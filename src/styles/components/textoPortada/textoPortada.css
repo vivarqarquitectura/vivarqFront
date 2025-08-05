@@ -1,0 +1,221 @@
+.textoPortada {
+    color: white;
+    user-select: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.tituloH3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.tituloH1 {
+    font-weight: 300;
+    font-size: 92px;
+    line-height: 100px;
+}
+
+.subTituloH3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.btnVerProyecto {
+    display: inline-block;
+    margin-top: 26px;
+    padding: 6px 12px;
+    background-color: var(--colorBtn); /* Amarillo característico */
+    color: white; /* Texto oscuro para contraste */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--colorBtn); /* Bordes del mismo color */
+    border-radius: 6px; /* Bordes suavizados */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.btnVerProyecto:hover {
+    background-color: var(--colorBtnHover); /* Amarillo más oscuro */
+    color: white; /* Texto más oscuro */
+    border-color: var(--colorBtnHover); /* Cambiar color del borde */
+    
+}
+
+.btnVerProyecto:active {
+    background-color: var(--colorBtn); /* Amarillo más oscuro para clic */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra reducida */
+    
+}
+
+
+
+/* Móviles pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .textoPortada {
+        color: white;
+        user-select: none;
+        text-align: center;
+    }
+    .tituloH3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    
+    .tituloH1 {
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 35px;
+    }
+    
+    .subTituloH3 {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .btnVerProyecto {
+        margin-block: 26px;
+    }
+}
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .textoPortada {
+        color: white;
+        user-select: none;
+        text-align: center;
+    }
+    .tituloH3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    
+    .tituloH1 {
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 35px;
+    }
+    
+    .subTituloH3 {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .btnVerProyecto {
+        margin-block: 26px;
+    }
+}
+
+/* Tablets pequeñas (376px a 425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+    .textoPortada {
+        color: white;
+        user-select: none;
+        text-align: center;
+    }
+    .tituloH3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    
+    .tituloH1 {
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 35px;
+    }
+    
+    .subTituloH3 {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .btnVerProyecto {
+        margin-block: 26px;
+    }
+}
+
+/* Tablets pequeñas (426px a 600px) */
+@media (min-width: 426px) and (max-width: 600px ){
+    .textoPortada {
+        color: white;
+        user-select: none;
+        text-align: center;
+    }
+    .tituloH3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    
+    .tituloH1 {
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 35px;
+    }
+    
+    .subTituloH3 {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .btnVerProyecto {
+        margin-block: 26px;
+    }
+}
+
+/* Tablets medianas (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .textoPortada {
+        color: white;
+        user-select: none;
+        text-align: center;
+    }
+    .tituloH3 {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+    
+    .tituloH1 {
+        font-weight: 300;
+        font-size: 6rem;
+        line-height: 70px;
+    }
+    
+    .subTituloH3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    .btnVerProyecto {
+        margin-block: 26px;
+    }
+}
+
+/* Tablets grandes y desktop pequeños (769px a 1069px) */
+@media (min-width: 769px) and (max-width: 929px) {
+    .textoPortada {
+        color: white;
+        user-select: none;
+        text-align: center;
+    }
+    .tituloH3 {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+    
+    .tituloH1 {
+        font-weight: 300;
+        font-size: 6rem;
+        line-height: 70px;
+    }
+    
+    .subTituloH3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    .btnVerProyecto {
+        margin-block: 26px;
+    }
+}
