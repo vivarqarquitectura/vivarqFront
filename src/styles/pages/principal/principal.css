@@ -19,7 +19,67 @@
     height: calc(100dvh - var(--navbar-height) - var(--margin-top-navbar)); /* Altura dinámica descontando el NavBar y el margin-top al Nav */
 }
 
-/* seccion reemplazo a la 2*/
+/* seccion Tarjeta de pasos*/
+.tarjetaPasos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    background-color: white;
+    border-radius: var(--borderRadiusGrande);
+    border: solid 1px var(--colorGrisGlobal);
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        box-shadow: 20px 0px 20px -10px rgba(0, 0, 0, 0.3);
+        
+        pointer-events: none;
+        border-radius: 0 26px 26px 0;
+        z-index: -1;
+    }
+    & .contenidoPasos {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 50px;
+        
+    }
+    & p:first-child {
+        position: absolute;
+        top: 0;
+        z-index: -999;
+        text-align: center;
+        font-size: 10em;
+        font-weight: bolder;
+    }	
+    & h1 {
+        width: 100%;
+        padding-left: 30px;
+        padding-bottom: 26px;
+        background-color: white;
+        box-shadow: 0px -10px 15px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    & p {
+        width: 100%;
+        padding-left: 30px;
+        font-size: 1.2em;
+        text-align: balance;
+        
+    }
+}
 
 .seccion2a {
     display: flex;
