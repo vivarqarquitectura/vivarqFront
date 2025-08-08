@@ -6,7 +6,7 @@ import { CardProyectoGratis } from "../../components/seccion3/CardProyectoGratis
 import { FormasDePago } from "../../components/seccion5/formasDePago";
 import { Footer } from "../../components/seccion6/Footer";
 import ListarProyectos from "../../components/seccion4/ListarProyectos";
-import TarjetaPasos from "../../components/seccion2/TarjetaPasos"
+
 import gifPlano from '../../assets/GIF/gifPlanoMedidas.gif'
 import giRenders from '../../assets/GIF/gifRenders.gif'
 import materialesConstructivos3 from '../../assets/GIF/materialesConstructivos3.gif'
@@ -42,7 +42,6 @@ return (
                     <Carrusel />{/*renderiza  <ImgPortada /> */}
                 </div>
             </div>
-            <TarjetaPasos/>
             <div className="seccion2a">
                 <img src={gifPlano} alt="gg" />
                 <div className="planosConMedidas">
@@ -50,8 +49,6 @@ return (
                     <p>Planos con medidas y especificaciones técnicas que permitirá a los obreros obtener la información necesaria para la construcción de la obra.</p>
                 </div>
             </div>
-            
-            
             <div className="seccion2b">
                 <div className="planosConMedidas">
                     <h1>2 |Imágenes en 3D</h1>

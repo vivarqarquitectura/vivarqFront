@@ -22,8 +22,9 @@ function NavBar() {
         <nav className="navbar">
             {/* Logo a la izquierda */}
             <div className="navbar-brand">
-                <Link to={`${import.meta.env.VITE_URL_NAV}/`}>
-                    <img src={logoPlax} alt="Imagen portada" width={150} />
+                <Link className='vivarqMarca' to={`${import.meta.env.VITE_URL_NAV}/`}>
+                    {/* <img src={logoPlax} alt="Imagen portada" width={150} /> */}
+                    <p >VIVARQ</p>
                 </Link>
                 
             </div>
@@ -37,9 +38,9 @@ function NavBar() {
             <div className={`navbar-content ${isMenuOpen ? 'is-open' : ''}`}>
                 <div className="navbar-center">
                     
-                    <Link to={`${import.meta.env.VITE_URL_NAV}/`} className="navbar-item active">Proyectos</Link>
+                    {/* <Link to={`${import.meta.env.VITE_URL_NAV}/`} className="navbar-item active">Proyectos</Link>
                     <Link to={`${import.meta.env.VITE_URL_NAV}/`} className="navbar-item active">Nosotros</Link>
-                    <Link to={`${import.meta.env.VITE_URL_NAV}/`} className="navbar-item active">Contacto</Link>
+                    <Link to={`${import.meta.env.VITE_URL_NAV}/`} className="navbar-item active">Contacto</Link> */}
                 </div>
                 <div className="navbar-end">
                     <BtnCarrito/>

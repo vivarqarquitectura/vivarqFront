@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-evenly;
     height: 60px;
-    width: 230px;
+    width: 150px;
     border-radius: var(--borderRadiusGrande);
     box-shadow: var(--sombraTarjeta);
     background-color: white;
@@ -27,3 +27,4 @@
 .menuHerramientas h2:hover {
     background-color: #ededed;
 }
+

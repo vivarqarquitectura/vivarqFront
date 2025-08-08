@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //Componentes
-import { SidebarVisualizador } from "../../components/seccionVisualizador/nav/sidebarVisualizador";
+import { SidebarVisualizador } from "../../components/seccionVisualizador/nav/SidebarVisualizador";
 //Estilos
 import '../../styles/pages/visualizador/visualizador.css'
 import { Herramientas } from "../../components/seccionVisualizador/herramientas/Herramientas";
@@ -19,6 +19,8 @@ import Visor3d from "../../components/seccionVisualizador/seccionVisor3d/Visor3d
 import InstruccionControles from "../../components/seccionVisualizador/seccionVisor3d/InstruccionControles";
 
 export default function Visualizador () {
+    // Estado para manejar la visibilidad del nav 
+    const [sidebarVisible, setSidebarVisible] = useState(true);
     // Estado para manejar la imagen seleccionada
     const [imagenActual, setImagenActual] = useState(plantaReplanteo);
     
@@ -37,28 +39,37 @@ export default function Visualizador () {
 
         setImagenActual(imagenes[nombreImagen] || plantaReplanteo);
     }
-    
+
     return (
         <>
             {!mostrar2D && <InstruccionControles />}
             <div className="visualizador">
-                <div className="sidebar">
-                    <SidebarVisualizador onSeleccionar={cambiarImagen} />
-                </div>
+                {sidebarVisible && (
+                    <div className="sidebar">
+                        <SidebarVisualizador onSeleccionar={cambiarImagen} />
+                    </div>
+                )}
                 <div className="vistaDePlanos">
                     {/* Alterna entre la imagen 2D y el visor 3D */}
                     {mostrar2D ? (
                         <img src={imagenActual} alt="Plano 2D" />
                     ) : (
-                        <div className="formasDePago" style={{ height: '100dvh', width: '100vw' }}>
-                            <Visor3d />
+                        <div style={{ height: '100dvh', width: '100vw' }}>
+                            <Visor3d/>
                         </div>
                     )}
                 </div>
                 <div className="herramientas" >
                     {/* Pasamos la función para alternar entre 2D y 3D */}
-                    <Herramientas   onAlternar={() => setMostrar2D(!mostrar2D)}
-                                    textoBoton={mostrar2D ? "3D" : "2D"} // Cambia el texto dinámicamente
+                    <Herramientas
+                        onAlternar={() => {
+                            setMostrar2D((prev) => {
+                            const nuevoValor = !prev;
+                            setSidebarVisible(nuevoValor);
+                            return nuevoValor;
+                            });
+                        }}
+                        textoBoton={mostrar2D ? "3D" : "2D"}
                     />
                 </div>
             </div>

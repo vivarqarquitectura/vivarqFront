@@ -1,0 +1,143 @@
+.btnRegla {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /* border: solid 1px black; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border-radius: var(--borderRadiusGrande);
+    box-shadow: var(--sombraTarjeta);
+    background-color: white;
+
+    &:hover {
+        background-color: #ededed;
+    }
+}
+
+.btnCaminar {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /* border: solid 1px black; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border-radius: var(--borderRadiusGrande);
+    box-shadow: var(--sombraTarjeta);
+    background-color: white;
+
+    &:hover {
+        background-color: #ededed;
+    }
+}
+
+
+.mensajeCaminar {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+
+
+
+/*Tarjetas de informacion*/
+.selectClima,
+.sunSlider,
+.infoProyecto_1,
+.infoProyecto_2,
+.infoProyecto_3,
+.infoProyecto_4 {
+    position: absolute;
+    width: 220px;
+    height: 100px;
+    align-content: top;
+    left: 150px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: black;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--borderRadiusGrande);
+    border: 0.5px solid rgba(130, 130, 130, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.2s ease-in;
+    &:hover {
+        background-color: rgba(255, 255, 255);
+    }
+
+    & h3 {
+        font-size: large;
+    }
+}
+
+.infoProyecto_1{
+    top: 80px;
+}
+.infoProyecto_2{
+    
+    top: 200px;
+}
+.infoProyecto_3{
+    
+    top: 320px;
+}
+.infoProyecto_4{
+    
+    top: 440px;
+}
+
+.selectClima {
+    top: 560px;
+    left: 150px;
+    cursor: pointer;
+}
+
+.sunSlider {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    top: 710px;
+
+    & h3 {
+        padding-bottom: 20px;
+    }
+
+    & p {
+        font-size: large;
+        align-self: center;
+        padding-top: 20px;
+    }
+    
+}
+
+.minimapa {
+    position: absolute;
+    top: 80%;
+    right: 10px;
+    width: 250px;
+    height: 150px;
+    z-index: 20;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}

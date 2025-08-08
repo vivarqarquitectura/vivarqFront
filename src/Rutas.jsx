@@ -11,7 +11,7 @@ import Visualizador from './Pages/visualizador/Visualizador'
 import PerfilDeUsuario from './Pages/perfilUsuario/PerfilDeUsuario'
 import ProyectoGratis from './Pages/proyectos/ProyectoGratis'
 import SeccionCarrito from './Pages/pagos/SeccionCarrito'
-import Error404 from './Pages/error404/Error404'
+import Error404 from './Pages/error404/error404'
 import FormNuevoProyecto from './Pages/FormDeProyectos/FormNuevoProyecto'
 import FormAgr_Imgs_proyecto from './Pages/FormDeProyectos/FormAgr_Imgs_proyecto'
 

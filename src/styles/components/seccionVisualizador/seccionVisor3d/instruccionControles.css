@@ -4,22 +4,22 @@
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    
+    top: 80px;
+    right: 10px;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    row-gap: 30px;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-
+    border-radius: var(--borderRadiusGrande);
     & button {
         background-color: rgba(0, 0, 0, 0);
         color: white;
-        padding: 1rem 1.5rem;
+        padding: 0.5rem 1rem;
         border: solid 2px white;
         border-radius: 26px;
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-decoration: none;
         transition: background-color 0.2s;
         cursor: pointer;
@@ -29,12 +29,16 @@
         background-color: rgba(0, 0, 0, 7);
         color: white;
     }
+    /*Haciendole el hoyo al bton XD*/
+    -webkit-mask-image: radial-gradient(circle at 275px 25px, transparent 20px, black 30px);
+    mask-image: radial-gradient(circle at 275px 25px, transparent 20px, black 30px);
 }
 
 .instruccionControles {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    column-gap: 50px;
+    row-gap: 20px;
     & .teclado {
         display: flex;
         flex-direction: column;
@@ -56,7 +60,7 @@
     }
     & p {
         padding-inline: 10px;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     @media (width <= 768px) {

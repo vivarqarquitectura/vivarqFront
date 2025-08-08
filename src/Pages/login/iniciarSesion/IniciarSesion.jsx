@@ -37,7 +37,7 @@ export default function IniciarSesion () {
             localStorage.setItem("apellido",res.user.apellido);
             navigate("/",{ replace: true });
         }else{
-            alert("Usuario o contraseña incorrectos")
+            console.log("Usuario o contraseña incorrectos");
         }
     }
 

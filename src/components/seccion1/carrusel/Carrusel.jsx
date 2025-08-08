@@ -21,7 +21,7 @@ export default function Carrusel() {
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             navigation = {false} //Añade con true las flechas de navegación manual
-            pagination={{ clickable: true }}
+            pagination={{ clickable: false }}
             autoplay={{
                 delay: 3000, // 3 segundos de transición entre imágenes
                 disableOnInteraction: true,
