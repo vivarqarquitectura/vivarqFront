@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 import { useEffect, Suspense } from 'react';
 import * as THREE from 'three';
 function MiniModelo() {
-  const { scene } = useGLTF('/models/5x6.glb');
+  const { scene } = useGLTF('./models/5x6.glb');
 
   // Define el plano de corte horizontal en y = 0.2
   const clippingPlane = new THREE.Plane(new THREE.Vector3(0, -1, 0), 1.2);

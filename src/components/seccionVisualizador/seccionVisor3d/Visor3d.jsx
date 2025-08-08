@@ -19,7 +19,7 @@ import '../../../styles/components/seccionVisualizador/seccionVisor3d/enCanvas.c
 import * as THREE from 'three';
 
 function Modelo() {
-  const { scene } = useGLTF('/models/5x6.glb');
+  const { scene } = useGLTF('./models/5x6.glb');
   scene.traverse((child) => {
     if (child.isMesh) {
       child.castShadow = true;
