@@ -8,9 +8,7 @@ import { Footer } from "../../components/seccion6/Footer";
 import ListarProyectos from "../../components/seccion4/ListarProyectos";
 import TarjetaPasos from "../../components/seccion2/TarjetaPasos"
 
-import gifPlano from '../../assets/GIF/gifPlanoMedidas.gif'
-import giRenders from '../../assets/GIF/gifRenders.gif'
-import materialesConstructivos3 from '../../assets/GIF/materialesConstructivos3.gif'
+
 
 
 //CSS Paginas

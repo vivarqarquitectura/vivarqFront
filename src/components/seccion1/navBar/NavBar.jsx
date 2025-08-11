@@ -1,5 +1,4 @@
 import '../../../assets/logosPlax/PLAX ARQ.png';
-import logoPlax from '../../../assets/logosPlax/PLAX ARQ.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -23,7 +22,7 @@ function NavBar() {
             {/* Logo a la izquierda */}
             <div className="navbar-brand">
                 <Link className='vivarqMarca' to={`${import.meta.env.VITE_URL_NAV}/`}>
-                    {/* <img src={logoPlax} alt="Imagen portada" width={150} /> */}
+                    
                     <p >VIVARQ</p>
                 </Link>
                 
