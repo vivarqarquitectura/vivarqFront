@@ -149,6 +149,16 @@
     padding: 20px; /* Espaciado interno del contenedor */
     align-items: stretch; /* Las tarjetas llenan toda la altura de su celda */
 }
+.seccionScroll {/*Esta clase se crea para ajustar el section creado dentro del componente, ya que sin ese elemento no se puede ejecutar un scroll, debe ser a un elemento HTML y no a un componente*/
+    display: grid;
+    width: 80%;
+    justify-items: center;
+    margin-top: 0px;
+    gap: 20px; /* Espaciado entre las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Asegura un ancho mínimo cómodo */
+    padding: 20px; /* Espaciado interno del contenedor */
+    align-items: stretch; /* Las tarjetas llenan toda la altura de su celda */
+}
 
 .cardProyectos > * {
     min-width: 250px; /* Define un ancho mínimo para evitar el colapso */
@@ -560,6 +570,7 @@
         align-items: center;
         margin-top: 50px;
     }
+
 
     /* SECCION 5*/
     .formasDePago {

@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import  TextoPortada  from "../../components/seccion1/textoPortada/TextoPortada"
 import  NavBar  from "../../components/seccion1/navBar/NavBar";
 import Carrusel  from "../../components/seccion1/carrusel/Carrusel";
@@ -23,7 +24,19 @@ import '../../styles/components/seccion4/tarjetaProyecto.css'
 import '../../styles/components/seccion5/formasDePago.css'
 import '../../styles/components/seccion6/footer.css'
 
+
 export  default function App() {
+
+    const proyectosRef = useRef(null);
+
+const handleVerProyecto = () => {
+    if (proyectosRef.current) {
+        proyectosRef.current.scrollIntoView({ behavior: "smooth"});
+    } else {
+        console.warn("proyectosRef está null");
+    }
+};
+
 return (
     <div>
         {/* <ImagenDeFondo /> */}
@@ -37,7 +50,7 @@ return (
 
                 <div className="org-comp_principal">
                 {/* Asegúrate de que el TextoPortada y ImgPortada no estén comentados */}
-                    <TextoPortada />
+                    <TextoPortada onVerProyecto={handleVerProyecto}/>
                     <Carrusel />{/*renderiza  <ImgPortada /> */}
                 </div>
             </div>
@@ -47,8 +60,9 @@ return (
             <div className="cardProyectoGratis" >
                 <CardProyectoGratis/>
             </div>
+            <h1>Encuentra el que mejor se adapte a tus necesidades</h1>
             <div className="cardProyectos">
-                <ListarProyectos/> 
+                <ListarProyectos innerRef={proyectosRef}/> 
             </div>
 
             {/* 

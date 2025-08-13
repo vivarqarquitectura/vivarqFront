@@ -3,7 +3,7 @@ import { TarjetaProyecto } from "../../components/seccion4/TarjetaProyecto";
 //Iconos en tarjetas
 import { faToilet, faBed, faFireBurner, faCouch  } from '@fortawesome/free-solid-svg-icons';
 
-  export default function ListarProyectos() {
+  export default function ListarProyectos({ innerRef }) {
 
     const [proyectos, setProyectos] = useState([]);
 
@@ -20,7 +20,7 @@ import { faToilet, faBed, faFireBurner, faCouch  } from '@fortawesome/free-solid
     
 
     return (
-      <Fragment>
+      <section className="seccionScroll" ref={innerRef}>
         {
             proyectos.map((proyecto) => (
                 <TarjetaProyecto
@@ -39,6 +39,6 @@ import { faToilet, faBed, faFireBurner, faCouch  } from '@fortawesome/free-solid
                 />
             ))
         }
-      </Fragment>  
+      </section>  
     )
   }
