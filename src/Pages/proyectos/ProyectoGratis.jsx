@@ -7,7 +7,7 @@ import CardPlanoConMedidas from "../../components/seccionProyectos/seccion3/plan
 import CardInformacionProyecto from "../../components/seccionProyectos/seccion2/cardInformacionProyecto/CardInformacionProyecto";
 import PlanoConMedida1 from '../../assets/imgProyectos/imgProyecto1/planoConMedida1.jpg'
 import CardImaganes3d from "../../components/seccionProyectos/seccion3/imagenes3d/CardImaganes3d";
-import CardMateriales from "../../components/seccionProyectos/seccion4/cardMateriales/cardMateriales";
+import CardMateriales from "../../components/seccionProyectos/seccion4/cardMateriales/CardMateriales";
 import CardTarifas4 from "../../components/seccionProyectos/seccion5/tarifas/CardTarifas4";
 import { Footer } from "../../components/seccion6/Footer";
 
@@ -29,7 +29,7 @@ import '../../styles/components/seccionProyectos/seccion2/cardInformacionProyect
 import '../../styles/components/seccionProyectos/seccion3/cardPlanoConMedidas.css'
 import '../../styles/components/seccionProyectos/seccion3/cardImagenes3d.css'
 import '../../styles/components/seccionProyectos/seccion4/cardMateriales.css'
-import '../../styles/components/seccionProyectos/seccion5/CardTarifas.css'
+import '../../styles/components/seccionProyectos/seccion5/cardTarifas.css'
 
 //Import de imagenes necesarias
 import bgCasa3 from '../../assets/bg-casa3.jpg'

@@ -3,15 +3,15 @@ import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 // Importando páginas
-import Principal from '../src/Pages/principal/Principal'
-import Proyectos from '../src/Pages/proyectos/Proyectos'
+import Principal from './Pages/principal/Principal'
+import Proyectos from './Pages/proyectos/Proyectos'
 import IniciarSesion from './Pages/login/iniciarSesion/IniciarSesion'
 import Registrarse from './Pages/login/registrarse/Registrarse'
 import Visualizador from './Pages/visualizador/Visualizador'
 import PerfilDeUsuario from './Pages/perfilUsuario/PerfilDeUsuario'
 import ProyectoGratis from './Pages/proyectos/ProyectoGratis'
 import SeccionCarrito from './Pages/pagos/SeccionCarrito'
-import Error404 from './Pages/error404/error404'
+import Error404 from './Pages/error404/Error404'
 import FormNuevoProyecto from './Pages/FormDeProyectos/FormNuevoProyecto'
 import FormAgr_Imgs_proyecto from './Pages/FormDeProyectos/FormAgr_Imgs_proyecto'
 

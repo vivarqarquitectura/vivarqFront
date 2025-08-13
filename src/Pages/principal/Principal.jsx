@@ -3,7 +3,7 @@ import  NavBar  from "../../components/seccion1/navBar/NavBar";
 import Carrusel  from "../../components/seccion1/carrusel/Carrusel";
 import CarruselDeFondos from "../../components/seccion1/carruselFondo/CarruselDeFondos";
 import { CardProyectoGratis } from "../../components/seccion3/CardProyectoGratis";
-import { FormasDePago } from "../../components/seccion5/formasDePago";
+import { FormasDePago } from "../../components/seccion5/FormasDePago";
 import { Footer } from "../../components/seccion6/Footer";
 import ListarProyectos from "../../components/seccion4/ListarProyectos";
 import TarjetaPasos from "../../components/seccion2/TarjetaPasos"

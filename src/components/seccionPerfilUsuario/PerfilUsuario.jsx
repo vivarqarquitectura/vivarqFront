@@ -2,7 +2,7 @@ import React from 'react'
 //Assets
 import imgPerfilDeUsuario from '../../assets/imgTarjetas/casa3.png'
 //Estilos
-import '../../styles/components/seccionPerfilUsuario/PerfilUsuario.css'
+import '../../styles/components/seccionPerfilUsuario/perfilUsuario.css'
 
 export const PerfilUsuario = () => {
     return (
