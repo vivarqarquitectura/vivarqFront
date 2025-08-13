@@ -6,8 +6,8 @@ import '../../../styles/components/seccionVisualizador/seccionVisor3d/instruccio
 //imagenes
 import flechas from '../../../assets/visor3d/controlesNavegacion/Arrows.png'
 import wasd from '../../../assets/visor3d/controlesNavegacion/WASD.png'
-import mouseR from '../../../assets/visor3d/controlesNavegacion/mouseR.png'
-import mouseL from '../../../assets/visor3d/controlesNavegacion/mouseL.png'
+import mouseR from '../../../assets/visor3d/controlesNavegacion/MouseR.png'
+import mouseL from '../../../assets/visor3d/controlesNavegacion/MouseL.png'
 
 function InstruccionControles() {
     const [mostrar, setMostrar] = useState(true);
