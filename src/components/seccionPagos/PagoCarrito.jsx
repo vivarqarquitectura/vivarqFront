@@ -33,8 +33,7 @@ const PagoCarrito = () => {
         let compras={
                 id_usuario:localStorage.getItem('id_usuario'), 
                 cantidad_proyectos: CarritoEstado.length, 
-                monto_total:total,
-                fecha:""
+                monto_total:total
             }
         // Enviar la compra al servidor
         const response = await fetch(`${import.meta.env.VITE_URL_BACK}/nuevaCompra`, {
@@ -55,8 +54,7 @@ const PagoCarrito = () => {
                     id_compra: res.id,
                     id_usuario: localStorage.getItem('id_usuario'), 
                     id_proyecto: producto.id_proyecto, 
-                    tipo_proyecto: producto.opcion, 
-                    fecha_compra: "", 
+                    tipo_proyecto: producto.opcion,
                     precio_unitario: producto.precio
                 };
 
