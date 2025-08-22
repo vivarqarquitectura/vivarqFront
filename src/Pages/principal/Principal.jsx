@@ -60,10 +60,14 @@ return (
             <div className="cardProyectoGratis" >
                 <CardProyectoGratis/>
             </div>
-            <h1>Encuentra el que mejor se adapte a tus necesidades</h1>
-            <div className="cardProyectos">
-                <ListarProyectos innerRef={proyectosRef}/> 
-            </div>
+            
+            <section  className="sectionProyectos">
+                <h2>Encuentra el proyecto que mejor se adapte a tus necesidades</h2>
+                <hr />
+                <div className="cardProyectos">
+                    <ListarProyectos innerRef={proyectosRef}/> 
+                </div>
+            </section >
 
             {/* 
             componente de galeria de imagenes

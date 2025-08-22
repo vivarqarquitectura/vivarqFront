@@ -1,0 +1,30 @@
+:root {
+  --sk-base: #e5e7eb;
+  --sk-hi: #f3f4f6;
+  --sk-radius: 10px;
+}
+
+@keyframes sk-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--sk-base);
+  border-radius: var(--sk-radius);
+}
+.skeleton::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, var(--sk-hi), transparent);
+  transform: translateX(-100%);
+  animation: sk-shimmer 1.3s infinite;
+}
+
+/* Variantes */
+.sk-line { height: 12px; }
+.sk-line.lg { height: 16px; }
+.sk-line.sm { height: 8px; }
+.sk-rect { height: 72px; border-radius: 8px; }

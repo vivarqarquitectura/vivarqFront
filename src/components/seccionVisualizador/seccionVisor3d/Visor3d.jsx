@@ -2,11 +2,13 @@
 import { Suspense, useEffect, useState, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Environment } from '@react-three/drei';
+import * as THREE from 'three';
 import MeasurementTool from './MeasurementTool.jsx';
 import PlayerControls from './PlayerControls.jsx';
 import InfoProyecto from '../seccionVisor3d/InfoProyecto.jsx';
 import SunSlider from './SunSlider.jsx';
-import MiniMapa from './MiniMapa.jsx';
+/* import MiniMapa from './MiniMapa.jsx'; */
+import ContextLossGuard from './ContextLossGuard.jsx'
 
 //iconos
 import { TbRulerMeasure2 } from "react-icons/tb";
@@ -16,7 +18,7 @@ import { IoIosMan } from "react-icons/io";
 
 //Estilos
 import '../../../styles/components/seccionVisualizador/seccionVisor3d/enCanvas.css'
-import * as THREE from 'three';
+
 
 function Modelo() {
   const { scene } = useGLTF('./models/5x6.glb');
@@ -56,9 +58,14 @@ function Visor3d() {
   const [entorno, setEntorno] = useState('sunset');
   /* Estado que maneja el la orientacion solar*/
   const [sunAzimuth, setSunAzimuth] = useState(45); // Estado para el slider
-
+  /* Estado para  manejar la posición de la cámara*/
   const [mainCameraPosition, setMainCameraPosition] = useState([-5, 1.5, 10]);
   const [mainCameraDirection, setMainCameraDirection] = useState([0, 0, -1]);
+  /* Estado para manejar la visibilidad del panel InfoProyectos*/
+  const [showInfo, setShowInfo] = useState(false);
+  /* Estado para controlar el ContextLoss*/
+  const [glKey, setGlKey] = useState(0);
+
 
   // Calcula la posición del sol en círculo horizontal
   const sunRadius = 15;
@@ -88,6 +95,7 @@ function Visor3d() {
         onClick={() => setMedirActivo((prev) => !prev)}>
         {medirActivo ? <FaInfo size={20} /> : <TbRulerMeasure2 size={20} />}
       </button>
+
       {/* Botón HTML para habilitar la funcionalidad de caminar en el modelo */}
       <button className='btnCaminar' title='Caminar'
       onClick={() => {
@@ -102,6 +110,42 @@ function Visor3d() {
       >
         {caminarActivo ? <IoIosMan size={20} /> : <FaWalking size={20} />}
       </button>
+      {/* Botón HTML para mostrar u ocultar información */}
+      <button 
+        className='btnInfo' 
+        title='Información del proyecto'
+        onClick={() => setShowInfo(prev => !prev)}
+      >
+        <FaInfo size={20} />
+      </button>
+      
+      {/* Funcion para mostrar/ocultar el panel de InfoProyectos */}
+      {showInfo && (
+        <div className="panelInfo">
+          <InfoProyecto />
+        </div>
+      )}
+      
+      {/* Funcion para mostrar/ocultar el selector de ambientes */}
+      {showInfo && (
+        <select 
+        className='selectClima'
+        onChange={(e) => setEntorno(e.target.value)}
+        >
+          <option value="forest">Bosque</option>
+          <option value="sunset">Atardecer</option>
+          <option value="night">Noche</option>
+          <option value="city">Ciudad</option>
+          <option value="warehouse">Interior Almacén</option>
+          <option value="apartment">Interior Apartamento</option>
+        </select> 
+      )}
+      
+      {/* Funcion para mostrar/ocultar el Slider de orientación solar */}
+      {showInfo && (
+          <SunSlider value={sunAzimuth} onChange={setSunAzimuth} />
+      )}
+
 
       {caminarActivo && (
         <div className='mensajeCaminar'>
@@ -110,32 +154,40 @@ function Visor3d() {
           </p>
         </div>
       )}
-        <select 
-          className='selectClima'
-          onChange={(e) => setEntorno(e.target.value)}
-        >
-            
-            <option value="forest">Bosque</option>
-            <option value="sunset">Atardecer</option>
-            <option value="night">Noche</option>
-            <option value="city">Ciudad</option>
-            <option value="warehouse">Interior Almacén</option>
-            <option value="apartment">Interior Apartamento</option>
-      </select> 
-      <InfoProyecto/>
-      <SunSlider value={sunAzimuth} onChange={setSunAzimuth} />
-      <MiniMapa 
+      
+      {/*<MiniMapa 
         mainCameraPosition={mainCameraPosition} 
         mainCameraDirection={mainCameraDirection} 
-      />
+      /> */}
       <Canvas 
+          key={glKey}
+          dpr={[1, 1.5]}
+          gl={{
+              antialias: false,
+              powerPreference: 'high-performance',
+              preserveDrawingBuffer: false,
+              stencil: false,
+              alpha: true,
+            }}
+          shadows={{ type: THREE.PCFSoftShadowMap }}
           camera={{ position: [-5, 1.5, 10], fov: 65 }}
           onCreated={({ camera }) => {
             cameraRef.current = camera;
           }}
           style={{ background: '#fff' }}
-          shadows
+          
       >
+        {/* Componente que evita el Context Loss */}
+        <ContextLossGuard
+          onLost={() => {
+            // Re-montar todo el Canvas suele ser la forma más limpia
+            setGlKey((k) => k + 1);
+          }}
+          onRestored={() => {
+            // opcional: ocultar toast, etc.
+          }}
+        />
+
         {/* Luces y helpers */}
         <ambientLight intensity={0.5} />
         <directionalLight 

@@ -141,7 +141,7 @@ export default function Proyectos() {
                         cm3={cm3}
                     />
                 </div>
-                <div className="cardImagenes3d">
+{/*                 <div className="cardImagenes3d">
                     <h2>Vista previa del modelo</h2>
                     <iframe src="https://3dwarehouse.sketchup.com/embed/d7abd576-904c-464f-86aa-764e315ca870?token=j_TqCfIe6Sc=&binaryName=s21" 
                             frameborder="0" 
@@ -153,7 +153,7 @@ export default function Proyectos() {
                             allowfullscreen
                         >
                     </iframe>
-                </div>
+                </div> */}
                 <div className="cardTarifas">
                     <CardTarifas1
                         opcion={'Esencial'}

@@ -26,6 +26,8 @@ export default function Visualizador () {
     
     // Estado para alternar entre 2D y 3D
     const [mostrar2D, setMostrar2D] = useState(true);
+    
+
 
     // Función para cambiar la imagen
     const cambiarImagen = (nombreImagen) => {
@@ -70,6 +72,7 @@ export default function Visualizador () {
                             });
                         }}
                         textoBoton={mostrar2D ? "3D" : "2D"}
+                        
                     />
                 </div>
             </div>

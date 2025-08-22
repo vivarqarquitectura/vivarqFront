@@ -15,7 +15,7 @@ const SeccionCarrito = () => {
     <div className='contenedorPagos'>
         <NavBar/>
       <div className='gridPagos' >
-        <Carrito CarritoEstado={CarritoEstado} eliminarDelCarrito={eliminarDelCarrito}/>
+        <Carrito CarritoEstado={CarritoEstado} eliminarDelCarrito={eliminarDelCarrito} />
         <PagoCarrito/>
       </div>
     </div>

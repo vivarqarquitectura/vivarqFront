@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-evenly;
     height: 60px;
-    width: 150px;
+    width: 60px;
     border-radius: var(--borderRadiusGrande);
     box-shadow: var(--sombraTarjeta);
     background-color: white;

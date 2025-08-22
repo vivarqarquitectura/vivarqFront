@@ -39,6 +39,28 @@
         background-color: #ededed;
     }
 }
+.btnInfo {
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /* border: solid 1px black; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border-radius: var(--borderRadiusGrande);
+    box-shadow: var(--sombraTarjeta);
+    background-color: white;
+
+    &:hover {
+        background-color: #ededed;
+    }
+}
+
+
 
 
 .mensajeCaminar {
@@ -66,7 +88,7 @@
 .infoProyecto_4 {
     position: absolute;
     width: 220px;
-    height: 100px;
+    height: 70px;
     align-content: top;
     left: 150px;
     transform: translate(-50%, -50%);
@@ -94,19 +116,19 @@
 }
 .infoProyecto_2{
     
-    top: 200px;
+    top: 180px;
 }
 .infoProyecto_3{
     
-    top: 320px;
+    top: 280px;
 }
 .infoProyecto_4{
     
-    top: 440px;
+    top: 380px;
 }
 
 .selectClima {
-    top: 560px;
+    top: 480px;
     left: 150px;
     cursor: pointer;
 }
@@ -115,7 +137,7 @@
     height: 150px;
     display: flex;
     flex-direction: column;
-    top: 710px;
+    top: 620px;
 
     & h3 {
         padding-bottom: 20px;
@@ -140,4 +162,10 @@
     border-radius: 10px;
     overflow: hidden;
     background: #fff;
+}
+
+@media (max-width: 768px) {
+    .minimapa {
+        display: none;
+    }
 }

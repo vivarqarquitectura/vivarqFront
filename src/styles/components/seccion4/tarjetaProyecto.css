@@ -6,7 +6,8 @@
     align-items: center;
     width: 300px;
     border-radius: var(--borderRadiusGrande);
-    box-shadow: var(--sombraTarjeta);
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    /* box-shadow: var(--sombraTarjeta); */
     user-select: none;
 }
 /* div imagen y texto */
