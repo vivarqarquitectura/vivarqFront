@@ -39,12 +39,43 @@
 }
 
 .ct_cardTarifas2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     background-color: var(--colorFondoTarjetas);
     box-shadow: var(--sombraTarjeta);
     border-radius: var(--borderRadiusGrande);
-    padding: 20px;
+    /* padding: 20px; */
+    /* border: solid 10px var(--colorPrecio); */
     box-sizing: border-box;
-    border: solid 10px var(--colorPrecio);
+
+    & .ct_cardTarifas2_div1 {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        top: -50px;
+        align-self: center;
+        font-size: x-large;
+        font-weight: 500;
+        color: white;
+        background-color: #a2c7ff;
+        border-radius: var(--borderRadiusGrande);
+        padding-bottom: 60px;
+        column-gap: 5px;
+        width: 100%;
+        justify-content: center;
+        border-radius: 26px 26px 0 0;
+        padding-top: 5px;
+        z-index: -1;
+    }
+    & .ct_cardTarifas2_div2 {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px;
+        border-radius: var(--borderRadiusGrande);
+        border: solid 10px var(--colorPrecio);
+    }
 
     @media (width < 320px) {
         transform: translateX(250px);
