@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Skeleton from '../skeleton/Skeleton';
+import Casita_con_horizonte from '../../assets/carrito/casita_con_horizonte.png'
 //Estilos
 import '../../styles/components/seccionCarrito/carrito.css';
 const Carrito = ({ CarritoEstado, eliminarDelCarrito, isLoading = false }) => {
@@ -23,7 +24,7 @@ if (!Array.isArray(CarritoEstado) || CarritoEstado.length === 0) {
       <h2>Productos</h2>
       <div className="carrito-vacio">
         <img
-          src="../src/assets/carrito/casita_con_horizonte.png" // 👉 poné aquí la ruta de tu ilustración
+          src={Casita_con_horizonte} // 👉 poné aquí la ruta de tu ilustración
           alt="Carrito vacío"
           className="carrito-vacio-img"
         />
