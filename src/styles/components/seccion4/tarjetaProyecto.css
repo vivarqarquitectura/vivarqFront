@@ -95,3 +95,72 @@
         width: auto;
     }
 }
+
+/* Móviles medianos (321px a 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .tp-tarjetaProyecto{
+        background-color: var(--colorFondoTarjetas);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: auto;
+        border-radius: var(--borderRadiusGrande);
+        border: solid 1px rgba(0, 0, 0, 0.2);
+        /* box-shadow: var(--sombraTarjeta); */
+        user-select: none;
+    }
+
+    /* div imagen y texto */
+    .tp-imgYtxt h3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        padding-left: 0px;
+        transform: translateY(150px);
+        color: var(--colorTxtTarjetas);
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 0 0 26px 26px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    }
+
+    /* div iconos */
+    .tp-iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: space-b;
+        padding-block: 10px;
+        width: 90%;
+        border-bottom: solid 1px rgb(206, 206, 206);
+    }
+
+    .tp_iconoCantidad {
+        display: none;
+    }
+
+    /* div medidas */
+    .tp-medidas h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    /* div boton */
+    .tp-btnVerProyecto {
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        width: 100%;
+        margin-block: 10px;
+        padding-inline: 13px;
+    }
+
+
+    
+
+}

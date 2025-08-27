@@ -22,7 +22,7 @@ export const TarjetaProyecto = ({ bgCasa, titulo, iconos,frente,fondo,id_proyect
             {iconos.map((iconoObj, index) => (
                     <div key={index}>
                         <FontAwesomeIcon icon={iconoObj.icono} />
-                        <span>{iconoObj.cantidad}</span>
+                        <span className='tp_iconoCantidad'>{iconoObj.cantidad}</span>
                         
                     </div>
                 ))}
