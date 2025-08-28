@@ -379,8 +379,7 @@
         width: 100%;
     }
 }
-
-/* Móviles grandes (376px a 425px) */
+/* Tablets pequeñas (376px a 600px) */
 @media (min-width: 376px) and (max-width: 425px) {
     .formatoPrincipal {
         display: flex;
@@ -437,6 +436,23 @@
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
+    }
+    
+    /* sección 4 */
+    .sectionProyectos{
+        width:90%;
+        
+
+    }
+    .seccionScroll {/*Esta clase se crea para ajustar el section creado dentro del componente, ya que sin ese elemento no se puede ejecutar un scroll, debe ser a un elemento HTML y no a un componente*/
+        display: grid;
+        width: auto;
+        justify-items: center;
+        margin-top: 0px;
+        gap: 10px; /* Espaciado entre las tarjetas */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Asegura un ancho mínimo cómodo */
+        padding: 0px; /* Espaciado interno del contenedor */
+        align-items: stretch; /* Las tarjetas llenan toda la altura de su celda */
     }
 
     /* SECCION 5*/
