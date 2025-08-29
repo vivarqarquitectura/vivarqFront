@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
+//Estilos
+import "../../styles/pages/formDeProyectos/formAgrImgsProyecto.css";
 
 export default function FormAgr_Imgs_proyecto() {
 
@@ -131,9 +133,9 @@ export default function FormAgr_Imgs_proyecto() {
 
 
   return (
-    <div>
+    <div className="form-agr-imgs-container">
         <h1>Agregar Imagenes a un proyecto</h1>
-        <form action="">
+        <form action="" className="form-agr-imgs-form">
             <label htmlFor="proyecto">Seleccionar Proyecto</label><hr />
             <select name="id_proyecto" onChange={hendlerProyectoImagenes}>
                 <option selected>Seleccionar</option>

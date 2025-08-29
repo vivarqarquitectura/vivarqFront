@@ -1,0 +1,79 @@
+.form-agr-imgs-container {
+    max-width: 800px;
+    margin: var(--margin-top-navbar) auto;
+    padding: 2rem;
+    background-color: var(--colorTarjetasGuias);
+    border-radius: var(--borderRadiusGrande);
+    box-shadow: var(--sombraTarjeta2);
+    color: var(--colorNegroGlobal);
+    font-family: var(--textoSystemUi);
+
+    & > h1{
+        margin-bottom: 1rem;
+        font-weight: 600;
+        color: var(--colorTxtImportant);
+        text-align: center;
+    }
+}
+
+.form-agr-imgs-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    & select {
+        padding: 0.75rem 1rem;
+        border: var(--bordesYlineas);
+        border-radius: var(--borderRadiusGrande);
+        background-color: var(--colorInput);
+    }
+
+    & input[type="file"] {
+        padding: 0.75rem 1rem;
+        border: var(--bordesYlineas);
+        border-radius: var(--borderRadiusGrande);
+        background-color: var(--colorInput);
+    }
+
+    & button {
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: var(--borderRadiusGrande);
+        background-color: var(--colorBtn);
+        color: var(--colorBlancoGlobal);
+        box-shadow: var(--sombraBtn);
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    & button:hover {
+        background-color: var(--colorBtnHover);
+    }
+
+    & input[type="button"] {
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: var(--borderRadiusGrande);
+        background-color: var(--colorBtn);
+        color: var(--colorBlancoGlobal);
+        box-shadow: var(--sombraBtn);
+        cursor: pointer;
+        transition: background-color 0.3s;        
+    }
+    & input[type="button"]:hover{
+        background-color: var(--colorBtnHover);
+    }
+
+    & img {
+        max-width: 100%;
+        border-radius: var(--borderRadiusGrande);
+        box-shadow: var(--sombraTarjeta2);
+    }
+}
+
+
